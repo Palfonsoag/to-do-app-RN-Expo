@@ -30,7 +30,6 @@ class App extends Component {
           addTask={this.addTask}
           textContent={this.state.inputText}
         />
-        <Text>{this.state.inputText}</Text>
         <Body tasks={this.state.tasks} />
       </View>
     );

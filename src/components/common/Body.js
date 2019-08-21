@@ -1,14 +1,14 @@
 import React from "react";
 import { Text, View, StyleSheet, FlatList } from "react-native";
+import Task from "./Task";
 
 const renderTask = task => {
   console.log("task on body", task);
-  return <Text>{task.task}</Text>;
+  return <Task task={task.task} />;
 };
 
 const Body = ({ bodyContainer, tasks }) => (
   <View style={[styles.container, bodyContainer]}>
-    <Text>Body</Text>
     <FlatList
       data={tasks}
       renderItem={({ item, index }) => renderTask(item)}
@@ -19,9 +19,9 @@ const Body = ({ bodyContainer, tasks }) => (
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
-
-    backgroundColor: "#98FB98"
+    flex: 4,
+    backgroundColor: "#FFFFFF",
+    paddingHorizontal: 20
   }
 });
 

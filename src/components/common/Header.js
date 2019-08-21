@@ -8,9 +8,9 @@ const Header = ({
   textContent
 }) => (
   <View style={[styles.container, headerContainer]}>
-    <Text>Header</Text>
+    <Text style={styles.title}>To Do App</Text>
     <TextInput
-      placeholder={"Write your task"}
+      placeholder={"Write your task here..."}
       style={styles.textInput}
       onChangeText={onInputTextChange}
       onSubmitEditing={addTask}
@@ -23,10 +23,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#00FF00"
+    backgroundColor: "#3E5F8A"
   },
   textInput: {
-    paddingHorizontal: 16
+    borderWidth: 1,
+    borderColor: "#000000",
+    fontSize: 22,
+    backgroundColor: "#FFFFFF",
+    marginHorizontal: 20,
+    marginTop: 25,
+    paddingHorizontal: 15
+  },
+  title: {
+    fontSize: 28,
+    color: "#FFFFFF",
+    alignSelf: "center",
+    marginTop: 25
   }
 });
 
