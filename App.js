@@ -22,6 +22,11 @@ class App extends Component {
     });
   };
 
+  removeTask = id => {
+    const taskFiltered = this.state.tasks.filter(task => task.id !== id);
+    this.setState({ tasks: taskFiltered });
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -30,7 +35,7 @@ class App extends Component {
           addTask={this.addTask}
           textContent={this.state.inputText}
         />
-        <Body tasks={this.state.tasks} />
+        <Body tasks={this.state.tasks} handleTaskRemoval={this.removeTask} />
       </View>
     );
   }
