@@ -4,6 +4,12 @@
     "slug": "to-do-app",
     "privacy": "public",
     "sdkVersion": "34.0.0",
+    "ios": {
+      "package":"com.pedro_alfonso_garcia.to_do_app"
+    },
+    "android": {
+      "package": "com.pedro_alfonso_garcia.to_do_app"
+    },
     "platforms": [
       "ios",
       "android",
